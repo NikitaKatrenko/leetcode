@@ -2,14 +2,13 @@
  * @param {number[][]} graph
  * @return {boolean}
  */
-var isBipartite = function(graph) {
+var isBipartite = function (graph) {
 
     // create a graph class
     class Graph {
         // defining vertex array and
         // adjacent list
-        constructor(noOfVertices)
-        {
+        constructor(noOfVertices) {
             this.noOfVertices = noOfVertices;
             this.AdjList = new Map();
         }
@@ -21,6 +20,7 @@ var isBipartite = function(graph) {
             // null array
             this.AdjList.set(v, []);
         }
+
         addEdge(v, w) {
             // get the list for vertex v and put the
             // vertex w denoting edge between v and w
