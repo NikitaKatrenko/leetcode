@@ -11,6 +11,7 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
+    //implement all errors handling
     let digit = 0;
     let res = l1;
 
