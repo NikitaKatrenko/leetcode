@@ -32,7 +32,7 @@ var isBipartite = function (graph) {
         }
         isEmpty() {
             // return true if the queue is empty.
-            return this.items.length == 0;
+            return this.items.length === 0;
         }
         printQueue() {
             var str = "";
