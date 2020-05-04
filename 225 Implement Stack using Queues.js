@@ -4,7 +4,7 @@
 /**
  * @constructor
  */
-var MyStack = function() {
+var MyStack = function () {
     this.queue = new Queue();
 };
 
@@ -12,7 +12,7 @@ var MyStack = function() {
  * @param {number}
  * @returns {void}
  */
-MyStack.prototype.push = function(x) {
+MyStack.prototype.push = function (x) {
     var nextQueue = new Queue();
     nextQueue.enqueue(x);
     nextQueue.enqueue(this.queue);
@@ -22,7 +22,7 @@ MyStack.prototype.push = function(x) {
 /**
  * @returns {void}
  */
-MyStack.prototype.pop = function() {
+MyStack.prototype.pop = function () {
     var x = this.queue.dequeue();
     this.queue = this.queue.dequeue();
     return x;
@@ -31,36 +31,36 @@ MyStack.prototype.pop = function() {
 /**
  * @returns {number}
  */
-MyStack.prototype.top = function() {
+MyStack.prototype.top = function () {
     return this.queue.top();
 };
 
 /**
  * @returns {boolean}
  */
-MyStack.prototype.empty = function() {
+MyStack.prototype.empty = function () {
     return this.queue.length() === 0;
 };
 
 
 // Wrapper class for Queue. Uses simple list operations
-var Queue = function() {
+var Queue = function () {
     this.lst = [];
 }
 
-Queue.prototype.enqueue = function(x) {
+Queue.prototype.enqueue = function (x) {
     this.lst.push(x);
 }
 
-Queue.prototype.dequeue = function() {
+Queue.prototype.dequeue = function () {
     return this.lst.shift();
 }
 
-Queue.prototype.length = function() {
+Queue.prototype.length = function () {
     return this.lst.length;
 }
 
-Queue.prototype.top = function() {
+Queue.prototype.top = function () {
     return this.lst[0];
 }
 
