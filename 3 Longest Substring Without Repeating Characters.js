@@ -1,8 +1,4 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLongestSubstring = function(s) {
+let lengthOfLongestSubstring = function(s) {
     let tmp = '';
     let res = 0;
 
